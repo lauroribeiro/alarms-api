@@ -5,4 +5,6 @@ Rails.application.routes.draw do
       get :trigger
     end
   end
+
+  root 'alarms#index', defaults: { format: 'json' }
 end
