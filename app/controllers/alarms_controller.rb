@@ -3,7 +3,7 @@ class AlarmsController < ApplicationController
 
   # GET /alarms
   def index
-    @alarms = Alarm.all
+    @alarms = Alarm.order(id: :desc).limit(10)
   end
 
   # GET /alarms/trigger
